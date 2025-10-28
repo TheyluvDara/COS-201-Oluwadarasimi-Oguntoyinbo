@@ -12,16 +12,16 @@ int main() {
     cout<< "\n"<< "What is your name ===> ";
     getline(cin, studentName);
 
-    bool IsPauStudent;
+    int IsPauStudent;
     cout<< "\n"<< "Are you a student of PAU (0 for False, 1 for True) ===> ";
     cin>> IsPauStudent;
     
-    string PauStudent;
-    if (IsPauStudent){
-        PauStudent = "yes";
-    } else {
-        PauStudent = "no";
-    }
+    bool PauStudent = (IsPauStudent != 0);
+    // if (IsPauStudent){
+    //     PauStudent = "yes";
+    // } else {
+    //     PauStudent = "no";
+    // }
 
     cout<< "\n";
 
@@ -117,7 +117,7 @@ int main() {
     cout<< "\n";
     cout<< "\n";
 
-    cout<< "Name: " << studentName << "  (Pau student:"<< PauStudent <<") \n";
+    cout<< "Name: " << studentName << "  (Pau student:"<< (PauStudent ? "YES" : "NO" ) <<") \n";
     cout<< "Course: "<< course << "  Days: "<< days <<"\n";
     cout<< "Registration: ₦"<< registration << "  (reg discount: ₦"<< regDiscount << ") \n";
     cout<< "Lodging: ₦"<< lodging <<" * "<< days << " = ₦" << lodgingCost << "  (lodging discount: ₦"<< lodgeDiscount << ") \n";
